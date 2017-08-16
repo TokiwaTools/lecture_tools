@@ -614,7 +614,7 @@ for (int i = 0; i < array.length; i++) {
 
 ### 掃除の順序
 
-1. [表面上の改善](./contents/beginner/readableBabanuki.zip)
+1. [表面上の改善](./contents/beginner/readableBabanuki_1.zip)
 1. 解読
 1. コメントを挿入
 1. 適切な名前付け
