@@ -102,7 +102,7 @@
 
 ## Unreadableババ抜きを見る
 
-[Download](contents/beginner/Unreadable_Babanuki.zip)
+[Download](./contents/beginner/Unreadable_Babanuki.zip)
 
 ---
 
@@ -364,7 +364,7 @@ println(total); //totalのスコープ終了
 
 - グローバル変数だらけの例
 
-![](../images/too_many_global_variable.png)
+![](./images/too_many_global_variable.png)
 
 |||
 
@@ -477,7 +477,7 @@ ifの中にifがあるみたいな入れ子構造が4つ以上になる
 
 #### forIf攻撃
 
-![forIf攻撃](../images/for_if_attack.png)
+![forIf攻撃](./images/for_if_attack.png)
 
 |||
 
