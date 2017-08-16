@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Ricty Diminished';
+    src: url('RictyDiminished-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ricty Diminished';
+    src: url('RictyDiminished-Oblique.ttf') format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ricty Diminished';
+    src: url('RictyDiminished-Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ricty Diminished';
+    src: url('RictyDiminished-BoldOblique.ttf') format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
