@@ -1,7 +1,7 @@
 ## 資料
 
-### goo.gl
+### https://goo.gl/2YgTNw
 
 Note:
-Slide: http://tokiwatools.github.io/lecture_readable
+Slide: https://tokiwatools.github.io/lecture_readable
 GitHub: https://github.com/tokiwatools/lecture_readable

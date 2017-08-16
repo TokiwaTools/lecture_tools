@@ -102,7 +102,7 @@
 
 ## Unreadableババ抜きを見る
 
-[Download](../contents/beginner/Unreadable_Babanuki.zip)
+[Download](contents/beginner/Unreadable_Babanuki.zip)
 
 ---
 
