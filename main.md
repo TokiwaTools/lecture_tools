@@ -606,6 +606,24 @@ for (int i = 0; i < array.length; i++) {
 
 ---
 
+### 掃除の前に…
+
+[ババ抜きのルールを確認する](https://ja.wikipedia.org/wiki/ババ抜き)
+
+---
+
+### 掃除の順序
+
+1. [表面上の改善](./contents/beginner/readableBabanuki.zip)
+1. 解読
+1. コメントを挿入
+1. 適切な名前付け
+1. 変数で分割する
+1. メソッドで分割する
+1. 諸々
+
+---
+
 ## 参考文献
 
 - [リーダブルコード](https://www.amazon.co.jp/dp/4873115655/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=E8HOB3NQ55TV&coliid=I1K6HSWVGJK4QW), オライリージャパン
