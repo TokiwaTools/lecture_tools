@@ -95,12 +95,12 @@
         <li><a href="#/22">メソッドによる分割</a></li>
         <li><a href="#/23">TIPS</a></li>
     </ol>
-    <li><a href="#/27">掃除を始める</a></li>
+    <li><a href="#/26">掃除を始める</a></li>
     <ol>
-        <li><a href="#/28">掃除の前に…</a></li>
-        <li><a href="#/29">掃除の流れ</a></li>
-        <li><a href="#/30">課題</a></li>
-        <li><a href="#/31">プログラム解説</a></li>
+        <li><a href="#/27">掃除の前に…</a></li>
+        <li><a href="#/28">掃除の流れ</a></li>
+        <li><a href="#/29">課題</a></li>
+        <li><a href="#/30">プログラム解説</a></li>
     </ol>
 </ol>
 </font>
