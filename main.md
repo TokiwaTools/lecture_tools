@@ -77,7 +77,7 @@
 
 ## 目次
 
-<font size="5.0em">
+<font size="4.0em">
 <ol>
     <li><a href="#/10">Unreadableババ抜きを見る</a></li>
     <li><a href="#/11">BADCODEの定義</a></li>
