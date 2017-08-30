@@ -622,7 +622,7 @@ for (int i = 0; i < array.length; i++) {
 
 1. [表面上の改善](./contents/beginner/readableBabanuki_1.zip)
 1. [解読・コメントを挿入](./contents/beginner/readableBabanuki_2.zip)
-1. 適切な名前付け
+1. [適切な名前付け](./contents/beginner/readableBabanuki_3.zip)
 1. 変数で分割する、スコープを縮める
 1. メソッドで分割する
 1. ファイルで分割する
@@ -651,6 +651,8 @@ for (int i = 0; i < array.length; i++) {
     - あえて冗長に名前付けする (hand = 手札だがhandCardとしてカードであることを示唆する)
     - 名前の置換はProcessingの機能だと不十分なので外部エディタを使うとよい
     - ファイル名も変えて良い
+    - 単語の重複を避ける (drawは｢描く｣意味で使用しているのでカードを引く意味の｢draw｣は使わない)
+    - 意味の多い単語は避ける (take, makeなど)
 
 ---
 
