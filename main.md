@@ -623,7 +623,7 @@ for (int i = 0; i < array.length; i++) {
 1. [表面上の改善](./contents/beginner/readableBabanuki_1.zip)
 1. [解読・コメントを挿入](./contents/beginner/readableBabanuki_2.zip)
 1. [適切な名前付け](./contents/beginner/readableBabanuki_3.zip)
-1. 変数で分割する、スコープを縮める
+1. [変数で分割する、スコープを縮める](./contents/beginner/readableBabanuki_4.zip)
 1. メソッドで分割する
 1. ファイルで分割する
 1. 諸々
