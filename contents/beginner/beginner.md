@@ -88,10 +88,8 @@ for (int i = 0; i < array.length; i++) {
 - 定数を右側に
 
 ~~~processing
-/*---BEFORE---*/
 if (max > 10) ...
 
-/*---AFTER---*/
 if (posX > maxX) ...
 ~~~
 
