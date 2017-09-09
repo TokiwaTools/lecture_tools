@@ -168,6 +168,15 @@ if (inRange) ...
     /*---AFTER---*/
     boolean drawing = false;
     ~~~
+- 単語を統一する
+    - select, choose など意味の似た単語は統一する
+- 番号 = number, 数 = count と使い分ける (本来どちらもnumber)
+- あえて冗長に名前付けする
+    - hand = 手札だがhandCardとしてカードであることを示唆する
+- 単語の重複を避ける
+    - drawを｢描く｣意味と｢引く｣意味の両方で使わない
+- 意味の多い単語は避ける
+    - take, makeなど
 
 - (ローマ字を使わない)
     - ローマ字否定派と容認派がいる
@@ -490,21 +499,22 @@ for (int i = 0; i < array.length; i++) {
 
 ### <a name=4-2>掃除の流れ</a>
 
-1. [表面上の改善](./contents/beginner/readableBabanuki_1.zip)
-1. [解読・コメントを挿入](./contents/beginner/readableBabanuki_2.zip)
-1. [適切な名前付け](./contents/beginner/readableBabanuki_3.zip)
-1. [変数で分割する、スコープを縮める](./contents/beginner/readableBabanuki_4.zip)
-1. [メソッド、ファイルで分割する](./contents/beginner/readableBabanuki_5.zip)
+1. [表面上の改善](readableBabanuki_1.zip)
+1. [解読・コメントを挿入](readableBabanuki_2.zip)
+1. [適切な名前付け](readableBabanuki_3.zip)
+1. [変数で分割する、スコープを縮める](readableBabanuki_4.zip)
+1. [メソッド、ファイルで分割する](readableBabanuki_5.zip)
+    - [アニメーション削除版](./contents/beginner/readableBabanuki_5_no_animations.zip)
 1. 諸々
 
 ---
 
 ### <a name=4-3>課題</a>
 
-#### **[可読性を高める](#/12)を参考にしてババ抜きをリーダブルにする**
+#### **[可読性を高める](#3)を参考にしてババ抜きをリーダブルにする**
 
-- [掃除の流れ](#/28)にサンプルコードを掲載している
-    - [2段階目](./contents/beginner/readableBabanuki_2.zip)をダウンロードして、3番目の｢適切な名前付け｣から各自取り組むこと
+- [掃除の流れ](#/4-2)にサンプルコードを掲載している
+    - [2段階目](readableBabanuki_2.zip)をダウンロードして、3番目の｢適切な名前付け｣から各自取り組むこと
 - サンプルコードは正解ではない 各自読みやすいコードを目指すこと
 - クラスなど取り扱ってない項目を使用してもよい
 - 構造やアルゴリズムを変えても良い

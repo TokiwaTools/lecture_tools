@@ -79,21 +79,21 @@
 
 <font size="4.0em">
 <ol>
-    <li><a href="#/10">Unreadableババ抜きを見る</a></li>
-    <li><a href="#/11">BADCODEの定義</a></li>
-    <li><a href="#/12">可読性を高める</a></li>
+    <li><a href="#/9">Unreadableババ抜きを見る</a></li>
+    <li><a href="#/10">BADCODEの定義</a></li>
+    <li><a href="#/11">可読性を高める</a></li>
     <ol>
-        <li><a href="#/13">表面上の改善</a></li>
-        <li><a href="#/14">ifの並び順</a></li>
-        <li><a href="#/15">ファイルによる分割</a></li>
-        <li><a href="#/16">変数で分割する</a></li>
-        <li><a href="#/17">名前で説明する</a></li>
-        <li><a href="#/18">コメントで説明する</a></li>
-        <li><a href="#/19">break, continue, returnで早く返す</a></li>
-        <li><a href="#/20">無駄を削除する</a></li>
-        <li><a href="#/21">変数のスコープを縮める</a></li>
-        <li><a href="#/22">メソッドによる分割</a></li>
-        <li><a href="#/23">TIPS</a></li>
+        <li><a href="#/12">表面上の改善</a></li>
+        <li><a href="#/13">ifの並び順</a></li>
+        <li><a href="#/14">ファイルによる分割</a></li>
+        <li><a href="#/15">変数で分割する</a></li>
+        <li><a href="#/16">名前で説明する</a></li>
+        <li><a href="#/17">コメントで説明する</a></li>
+        <li><a href="#/18">break, continue, returnで早く返す</a></li>
+        <li><a href="#/19">無駄を削除する</a></li>
+        <li><a href="#/20">変数のスコープを縮める</a></li>
+        <li><a href="#/21">メソッドによる分割</a></li>
+        <li><a href="#/22">TIPS</a></li>
     </ol>
     <li><a href="#/26">掃除を始める</a></li>
     <ol>
@@ -268,6 +268,15 @@ tempは形容詞がついたらあり 他は意味なし
 
 |||
 
+- 単語を統一する
+    - select, choose など意味の似た単語は統一する
+- 番号 = number, 数 = count と使い分ける (本来どちらもnumber)
+- あえて冗長に名前付けする
+    - hand = 手札だがhandCardとしてカードであることを示唆する
+- 単語の重複を避ける
+    - drawを｢描く｣意味と｢引く｣意味の両方で使わない
+- 意味の多い単語は避ける
+    - take, makeなど
 - (ローマ字を使わない)
     - ローマ字否定派と容認派がいる
     - ほとんどの言語は英語でできているので、個人的には否定派
@@ -623,7 +632,9 @@ for (int i = 0; i < array.length; i++) {
 1. [適切な名前付け](./contents/beginner/readableBabanuki_3.zip)
 1. [変数で分割する、スコープを縮める](./contents/beginner/readableBabanuki_4.zip)
 1. [メソッド、ファイルで分割する](./contents/beginner/readableBabanuki_5.zip)
+    - [アニメーション削除版](./contents/beginner/readableBabanuki_5_no_animations.zip)
 1. 諸々
+
 
 ---
 
