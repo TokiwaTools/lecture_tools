@@ -543,9 +543,12 @@ for (int i = 0; i < array.length; i++) {
         - クラブ [club], ダイヤ [diamond], ハート [heart], スペード [spade], ジョーカー [joker]
     - 数字 [number]
         - A, 2, 3, ..., J, Q, K
-    - 手札 [hand]
+    - 表裏の画像 [image]
 - プレイヤー [player]
     - 2人
+    - 手札(カード) [hand]
+- (捨て)場 [field]
+    - 一番上のカード
 
 #### ゲームの流れ
 
