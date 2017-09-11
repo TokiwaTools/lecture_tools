@@ -839,19 +839,333 @@ for (int i = 0; i < array.length; i++) {
 
 |||
 
-#### [サンプルコード](./contents/intermediate/readableBabanuki_1.zip)
+#### サンプルコード [[ダウンロード]](./contents/intermediate/readableBabanuki_1.zip)
+
+~~~processing
+final int CARD_WIDTH = 100;  //カードの横幅
+final int CARD_HEIGHT = 150;  //カードの縦幅
+
+//プレイヤー数は変動しないので定義しない
+
+Player [] players;  //プレイヤー
+Player turnPlayer;  //現在のターン
+Field field;        //場
+
+void setup() {
+  players = new Player [2];
+  players[0] = new Player("YOU");
+  players[1] = new Player("CP");
+  turnPlayer = players[0];
+  field = new Field();
+}
+
+void draw() {
+
+}
+
+/*
+マーク:
+  0: ジョーカー
+  1: クラブ
+  2: ダイヤ
+  3: ハート
+  4: スペード
+数字:
+  0: ジョーカー
+  1: A
+  2: 2
+  ...
+  10: J
+  11: Q
+  12: K
+*/
+
+//カード(トランプ)
+class Card {
+  final int SUIT;    //マーク
+  final int NUMBER;  //数字
+  final PImage SURFACE_IMAGE;  //表の画像(絵柄側)
+  final PImage BACK_IMAGE;     //裏の画像
+  
+  Card(int suit, int number, PImage surfaceImage, PImage backImage) {
+    SUIT = suit;
+    NUMBER = number;
+    SURFACE_IMAGE = surfaceImage;
+    BACK_IMAGE = backImage;
+  }
+}
+
+//捨て場
+class Field {
+  Card topCard;
+  
+  Field() {
+  }
+}
+
+//プレイヤー
+class Player {
+  final String NAME;  //名前
+  ArrayList<Card> handCards;  //手札
+  
+  Player (String name) {
+    NAME = name;
+    handCards = new ArrayList<Card>();
+  }
+}
+~~~
 
 ---
 
 ### 3. setupメソッドの移行
 
-- [初級編で作ったコード](./contents/beginner/readableBabanuki_5_no_animations.zip)から移行を始める
+- 初級編で作ったコードから移行を始める
+- なお単純化のためサンプルでは[アニメーション削除版](./contents/beginner/readableBabanuki_5_no_animations.zip)を使用する
 - まずはゲームの初期化を含むsetupメソッドから
-- なお単純化のため今回は[アニメーション削除版](./contents/beginner/readableBabanuki_5_no_animations.zip)を使用する
+- 基本的には従来のアルゴリズムを継承するべきだが、自分でよりよいアルゴリズムが思いつけばそれを採用してもよい
+- 名前はできるだけ従来のコードを真似すること
 
 |||
 
 #### [サンプルコード](./contents/intermediate/readableBabanuki_2.zip)
+
+~~~processing
+import java.util.Collections;
+
+final int CARD_WIDTH = 100;  //カードの横幅
+final int CARD_HEIGHT = 150;  //カードの縦幅
+
+//プレイヤー数は変動しないので定義しない
+
+Player [] players;  //プレイヤー
+Player turnPlayer;  //現在のターン
+Field field;        //場
+
+void setup() {
+  size(640, 640);
+  textSize(30);
+
+  players = new Player [2];
+  players[0] = new Player("YOU");
+  players[1] = new Player("CP");
+  turnPlayer = players[0];
+  field = new Field();
+
+  dealCards( createCards() );  //カードを配る
+  //プレイヤーそれぞれペアを捨てる
+  for (int i = 0; i < 2; i++) {
+    Player player = players[i];
+    discardPairCards(player);
+  }
+}
+
+void draw() {
+
+}
+
+/*
+マーク:
+  0: ジョーカー
+  1: クラブ
+  2: ダイヤ
+  3: ハート
+  4: スペード
+数字:
+  0: ジョーカー
+  1: A
+  2: 2
+  ...
+  10: J
+  11: Q
+  12: K
+*/
+
+//カード(トランプ)
+class Card {
+  final int SUIT;    //マーク
+  final int NUMBER;  //数字
+  final PImage SURFACE_IMAGE;  //表の画像(絵柄側)
+  final PImage BACK_IMAGE;     //裏の画像
+  
+  Card(int suit, int number, PImage surfaceImage, PImage backImage) {
+    SUIT = suit;
+    NUMBER = number;
+    SURFACE_IMAGE = surfaceImage;
+    BACK_IMAGE = backImage;
+  }
+}
+
+//捨て場
+class Field {
+  Card topCard;
+  
+  Field() {
+  }
+}
+
+//プレイヤー
+class Player {
+  final String NAME;  //名前
+  ArrayList<Card> handCards;  //手札
+  
+  Player (String name) {
+    NAME = name;
+    handCards = new ArrayList<Card>();
+  }
+}
+
+//ペアを捨てる
+void discardPairCards(Player player) {
+  ArrayList<Card> handCards = player.handCards;
+
+  for (int i = 0; i < handCards.size(); i++) {
+    Card card1 = handCards.get(i);
+    for (int j = i+1; j < handCards.size(); j++) {
+      Card card2 = handCards.get(j);
+      if (card1.NUMBER == card2.NUMBER) {
+        handCards.remove(card1);
+        handCards.remove(card2);
+        i--;
+        break;
+      }
+    }
+  }
+}
+
+//カードをプレイヤーに配る
+void dealCards(ArrayList<Card> cards) {
+  Collections.shuffle(cards);  //カードをシャッフルする
+  
+  for (int i = 0; i < cards.size(); i++) {
+    //交互に配る
+    Player player = players[i%2];
+    Card card = cards.get(i);
+    player.handCards.add(card);
+  }
+  
+  //山札をシャッフルしたので手札をシャッフルする必要はない
+}
+
+//カードの生成 (画像の読み込み)
+ArrayList<Card> createCards() {
+  ArrayList<Card> cards = new ArrayList<Card>();
+  PImage backImage = loadImage("back_red.gif");  //カード裏の画像
+  
+  //ジョーカーの追加
+  Card jokerCard = new Card(0, 0, loadImage("joker_red.gif"), backImage);
+  cards.add(jokerCard);
+  
+  //ジョーカー以外のカードの追加
+  for (int suit = 1; suit <= 4; suit++) {
+    String suitName = "";
+    switch(suit) {
+      case 1:
+        suitName = "club";
+      break;
+      case 2:
+        suitName = "diamond";
+      break;
+      case 3:
+        suitName = "heart";
+      break;
+      case 4:
+        suitName = "spade";
+      break;
+    }
+    
+    for (int num = 1; num <= 12; num++) {
+      String path = suitName + num + ".gif";
+      Card card = new Card(suit, num, loadImage(path), backImage);
+      cards.add(card);
+    }
+  }
+  
+  return cards;
+}
+~~~
+
+|||
+
+#### [補足] `discardPairCards`について
+- ペアを捨てるメソッドだが実装方法がいくつかある
+- 2つの組を捨てるため3つの組がある場合どれか1つは捨ててはならないことに注意
+
+|||
+
+#### リストから重複する値のペアを探索して削除するアルゴリズム
+##### [ダウンロード](contents/intermediate/discardPairCards_algorithm.zip)
+~~~processing
+/*
+before: 1, 2, 3, 2, 4, 2, 3
+after: 1, 4, 2 (順不同)
+*/
+
+ArrayList<String> sourceList = new ArrayList<String>();
+sourceList.add("1");
+sourceList.add("2");
+sourceList.add("3");
+sourceList.add("2");
+sourceList.add("4");
+sourceList.add("2");
+sourceList.add("3");
+
+//例1: 二重for文とremove(int index)を使う方法
+ArrayList<String> list = new ArrayList<String>(sourceList);
+for (int i = 0; i < list.size(); i++) {
+  String str1 = list.get(i);
+  for (int j = i+1; j < list.size(); j++) {
+    String str2 = list.get(j);
+    if (str1.equals(str2)) {
+      list.remove(i);
+      list.remove(j-1);
+      i--;
+      break;
+    }
+  }
+}
+
+//例2: 二重for文とremove(Object o)を使う方法
+list = new ArrayList<String>(sourceList);
+for (int i = 0; i < list.size(); i++) {
+  String str1 = list.get(i);
+  for (int j = i+1; j < list.size(); j++) {
+    String str2 = list.get(j);
+    if (str1.equals(str2)) {
+      list.remove(str1);
+      list.remove(str2);
+      i--;
+      break;
+    }
+  }
+}
+
+//例3: 二重for文とremoveAll(Collection<?> c)を使う方法
+list = new ArrayList<String>(sourceList);
+ArrayList<String> pairList = new ArrayList<String>();
+for (int i = 0; i < list.size(); i++) {
+  String str1 = list.get(i);
+  for (int j = i+1; j < list.size(); j++) {
+    String str2 = list.get(j);
+    if (str1.equals(str2)) {
+      pairList.add(str1);
+      pairList.add(str2);
+      i--;
+      break;
+    }
+  }
+}
+list.removeAll(pairList);
+~~~
+
+|||
+
+#### [余談] アルゴリズムの実装について
+- 基本的には実際にプレイする様子を思い浮かべてその通りに実装すればよい
+    - `dealCards`の場合、山札をシャッフルして交互に配る
+    - ランダムに何かする = `random()`を使うではない
+- リアルな行為に近いアルゴリズムは直感的で分かりやすい
+- 効率と可読性、拡張性はしばしトレードオフになる
+
 
 ---
 
