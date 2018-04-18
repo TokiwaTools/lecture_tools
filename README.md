@@ -1,1 +1,2 @@
-# [阿原研 2017年度末発表会](https://tokiwatools.github.io/present_2017final/)
+# [便利ツールLT](https://twitter.com/meiji_ncc/status/985456457884745729)
+- [スライド](https://kiito.me/lecture_tools)
