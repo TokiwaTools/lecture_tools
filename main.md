@@ -33,6 +33,7 @@
 	- ハイパーリンク
 	- iframeなどの埋め込み
 - CSSによる自由度の高いデザイン
+	- レスポンシブ
 	- デフォルトテーマがかっこいい
 - プレゼンターモードあり (`s`)
 
@@ -63,52 +64,123 @@
 
 ### [Jekyll](https://jekyllrb-ja.github.io/)
 
+- **Markdown** で 静的**Webページ** が作れるフレームワーク
+	- Rubyベース
+- GitHub Pagesと連携し、プッシュするだけでWebページができあがる
+- ブログ、ポートフォリオなど多数のテンプレートがある
+
+|||
+
+#### メリット
+
+- Gitによるバージョン管理
+- 多数のテンプレート
+	- しかもかっこいい
+- 静的ページなので速い
+
+|||
+
+#### デメリット
+
+- やっぱり細かくやろうとするとHTMLで書く必要がある
+- 環境構築がややこしい (Windows)
+- 使うテンプレートによってビルドシステムが異なり、ローカルサーバーの実行方法が異なる
+	- Gradle, gulp など
+	- 最初は有名なテンプレートを使うべき (資料が充実している)
+
+|||
+
+#### 支援
+
+- 自作Jekyll製ページ
+	- [総コンHP](https://github.com/ccc-sokon/ccc-sokon.github.io)
+	- [ポートフォリオ](https://github.com/TokiwaTools/tokiwatools.github.io)
+- [テーマ配布所](http://jekyllthemes.org/)
+
 ---
 
 ### [Sway](https://sway.com)
+
+- Microsoft製のWebスライド
+- PowerPointより簡単に作れる (LT向き)
+- 簡単なレスポンシブページとしても
+
+|||
+
+#### 2016年にSway講座を開きました
+<iframe width="760px" height="500px" src="https://sway.com/s/RSICxTuIcx03Gk9l/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
 
 ---
 
 ### [Dropbox Paper](https://paper.dropbox.com/)
 
+- Dropboxが最近リリースしたノートサービス
+- ブラウザ, iOS, Androidがある
+- Markdownで書ける
+- 連携
+	- Dropboxのファイル
+	- Google Calendar
+
 ---
 
 ### スマホアプリ
 
-- Spark
-- nicoli
-- VOX
-- Instaflash Pro
-- feather
+- [Spark](https://sparkmailapp.com/) `iOS` `Mac`
+	- メーラー、最強、Google, Outlook, Office365対応
+- [nicoli](https://itunes.apple.com/jp/app/nicoli-for-%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%8B%95%E7%94%BB/id918184283?mt=8) `iOS` (有料)
+	- ニコニコ動画支援ツール
+- [VOX](https://itunes.apple.com/jp/app/vox-player/id916215494?ls=1&mt=8) `iOS` `Mac`
+	- メディアプレイヤー
+- [Instaflash Pro](https://itunes.apple.com/jp/app/instaflash-pro/id888701288?mt=8) `iOS`
+	- 画像加工
+- [feather](https://itunes.apple.com/jp/app/feather-for-twitter/id793157344?mt=8) `iOS` (一部有料)
+	- 廃人向けTwitterクライアント (Tweetdeck風)
 
 ---
 
 ### Chrome拡張機能
 
-- Live Streaming Checker
-- BetterTweetDeck
-- crxMouse Chrome Gestures
-- にこさぽ
+- [Live Streaming Checker](https://chrome.google.com/webstore/detail/live-streaming-checker/akdjdcpngmpdcojlidemkbihnjdmgllg?hl=ja)
+	- Youtube Live, Twitch, ニコ生などの配信通知
+- [BetterTweetDeck](https://chrome.google.com/webstore/detail/bettertweetdeck/micblkellenpbfapmcpcfhcoeohhnpob?hl=ja)
+	- Twitter廃人向けクライアント「Tweetdeck」の廃人向けカスタマイズツール
+- [crxMouse Chrome Gestures](https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?hl=ja)
+	- マウスジェスチャー
+- [にこさぽ](https://chrome.google.com/webstore/detail/%E3%81%AB%E3%81%93%E3%81%95%E3%81%BD-%EF%BC%88%E3%83%8B%E3%82%B3%E7%94%9F%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%EF%BC%89/kfnogdokhemdbbclknmmjpcnmjmpjknc?hl=ja)
+	- ニコ生配信通知
 
 ---
 
 ### Windowsアプリ
 
-- Mailspring
+- Mailspring (基本無料)
+	- メーラー
 - miraCal
+	- カレンダー (ストアアプリ)
 - John's Background Switcher
+	- 私の[ブログ](http://tkw.hateblo.jp/entry/unify_wallpapers)を見よ
 - Visual Studio Code
-- ATOK
+	- エディタ
+- ATOK (有料)
+	- IME
 - QTTabBar
+	- エクスプローラ拡張
 - MacType
+	- フォントレンダラー
 - MusicBee
+	- メディアプレイヤー
 - Massigra
+	- 画像ブラウザ
 
 ---
 
 ### その他
 
 - [Qiita 人気の投稿](https://twitter.com/qiitapoi)
-- Scrapbox
-- Todoist
+	- プログラミング関連の記事が流れてくる (難)
+- Scrapbox `ブラウザ`
+	- Markdownライクなノートサービス
+- Todoist `ブラウザ` `iOS` `Android` `Chrome`
+	- ToDoリストサービス
 - Pushbullet
+	- スマホ⇔PC間でURLの共有が簡単にできる
