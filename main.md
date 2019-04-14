@@ -1,7 +1,7 @@
-# 便利ツールLT
+# [便利ツールLT](https://twitter.com/meiji_ncc/status/985456457884745729)
 
-<img src="http://kiito.me/assets/img/icons/tokiwa.png" style="margin:0; background: none; border:0" width=100vw />
-### [ときわ](https://twitter.com/tkw_fms) (B4)
+### [Koki Ito](https://twitter.com/kiito1000)
+#### 2018/4/19
 
 ---
 
